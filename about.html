@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="about.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <!-- CSS -->
+    <link href='main.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,
+        h1 {
+            font-family: "Montserrat", sans-serif
+        }
+
+        img {
+            margin-bottom: -7px;
+            max-width: 100%;
+            /* Ensure the image doesn't exceed its container */
+        }
+
+        .row-padding img {
+            margin-bottom: 12px
+        }
+
+        .open-sidebar-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 999;
+            background-color: transparent;
+            border: none;
+            font-size: 24px;
+            color: #ffffff;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .open-sidebar-button:hover {
+            color: #ccc;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .image-section {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .about-section {
+            flex: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" style="display:none;padding-top:75px" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-button w3-black w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
+            <i class="fa fa-remove"></i>
+        </a>
+        <div class="w3-bar-block w3-center">
+            <a href="index.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Pictures</a>
+            <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Temp</a>
+        </div>
+    </nav>
+    <!-- Button to open sidebar -->
+    <button id="openSidebarButton" class="open-sidebar-button" onclick="w3_open()"><i class="fa fa-bars"></i></button>
+
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+
+    <div class="w3-content">
+        <div class="container">
+            <div class="picture">
+                <img src="public/IMG_20240324_180804120.jpg" alt="Person's Photo" style = "width:50%">
+            </div>
+            <div class="about-section">
+                <div class="content">
+                    <h1>About Me</h1>
+                    <p>Hello, I'm Chloe!</p>
+                    <p>I'm passionate about [Your Interests or Field of Work]. I enjoy [Hobbies or Activities].</p>
+                    <p>Feel free to reach out to me through [Your Contact Information or Social Media Links].</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.width = "100%";
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("openSidebarButton").style.visibility = "hidden"; // Hide the button
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("openSidebarButton").style.visibility = "visible"; // Show the button
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+/* Define reusable variables for colors */
+:root {
+  --primary-color: #ee7752;
+  --secondary-color: #e73c7e;
+  --tertiary-color: #23a6d5;
+  --quaternary-color: #23d5ab;
+}
+
+/* Use flexible units for better responsiveness */
+body {
+  /* Use flex units for better responsiveness */
+  height: 100vh;
+  margin: 0;
+  /* Use gradient colors from variables */
+  background: linear-gradient(-45deg, var(--primary-color), var(--secondary-color), var(--tertiary-color), var(--quaternary-color));
+  /* Use background size for better quality */
+  background-size: 600% 600%;
+  /* Use vendor prefixes for better browser compatibility */
+  -webkit-animation: gradient 15s ease infinite;
+  animation: gradient 15s ease infinite;
+}
+
+/* Define animation for smoother transitions */
+@-webkit-keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Define animation for smoother transitions */
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
